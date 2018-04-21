@@ -9,12 +9,11 @@
 	tickCount = 0;
 	stateCount = 0;
 	nekoState = theState;
-	[self flushWindow];
 }
 
-- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)styleMask backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation
+- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSWindowStyleMask)styleMask backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation
 {
-	self = [super initWithContentRect:contentRect styleMask:NSBorderlessWindowMask backing:bufferingType defer:deferCreation];
+	self = [super initWithContentRect:contentRect styleMask:NSWindowStyleMaskBorderless backing:bufferingType defer:deferCreation];
 	[self setBecomesKeyOnlyIfNeeded:YES];
 	[self setLevel:NSStatusWindowLevel];
 	[self setOpaque:NO];
@@ -24,77 +23,76 @@
 	[self setFrame:NSMakeRect(0.0f, 0.0f, 32.0f, 32.0f) display:0];
 	[self center];
 	[self setBackgroundColor:[NSColor clearColor]];
-	[self useOptimizedDrawing:YES];
 	NSBundle *bundle = [NSBundle mainBundle];
 	
 	stop = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"mati2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/mati2" ofType:@"gif"]], nil];
 	[stop retain];
 	jare = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"jare2" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"mati2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/jare2" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/mati2" ofType:@"gif"]], nil];
 	[jare retain];
 	kaki = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"kaki1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"kaki2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/kaki1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/kaki2" ofType:@"gif"]], nil];
 	[kaki retain];
 	akubi = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"mati3" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/mati3" ofType:@"gif"]], nil];
 	[akubi retain];
 	sleep = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"sleep1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"sleep2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/sleep1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/sleep2" ofType:@"gif"]], nil];
 	[sleep retain];
 	awake = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"awake" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/awake" ofType:@"gif"]], nil];
 	[awake retain];
 	u_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"up1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"up2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/up1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/up2" ofType:@"gif"]], nil];
 	[u_move retain];
 	d_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"down1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"down2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/down1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/down2" ofType:@"gif"]], nil];
 	[d_move retain];
 	l_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"left1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"left2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/left1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/left2" ofType:@"gif"]], nil];
 	[l_move retain];
 	r_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"right1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"right2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/right1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/right2" ofType:@"gif"]], nil];
 	[r_move retain];
 	ul_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"upleft1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"upleft2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/upleft1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/upleft2" ofType:@"gif"]], nil];
 	[ul_move retain];
 	ur_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"upright1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"upright2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/upright1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/upright2" ofType:@"gif"]], nil];
 	[ur_move retain];
 	dl_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dwleft1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dwleft2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/dwleft1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/dwleft2" ofType:@"gif"]], nil];
 	[dl_move retain];
 	dr_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dwright1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dwright2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/dwright1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/dwright2" ofType:@"gif"]], nil];
 	[dr_move retain];
 	u_togi = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"utogi1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"utogi2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/utogi1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/utogi2" ofType:@"gif"]], nil];
 	[u_togi retain];
 	d_togi = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dtogi1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dtogi2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/dtogi1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/dtogi2" ofType:@"gif"]], nil];
 	[d_togi retain];
 	l_togi = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"ltogi1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"ltogi2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/ltogi1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/ltogi2" ofType:@"gif"]], nil];
 	[l_togi retain];
 	r_togi = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"rtogi1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"rtogi2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/rtogi1" ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/rtogi2" ofType:@"gif"]], nil];
 	[r_togi retain];
 	
 	[self setStateTo:stop];
@@ -131,7 +129,7 @@
 	}
 }
 
-- (BOOL)isNekoMoveStart
+- (BOOL)isnekoMoveStart
 {
 	return moveDx > 6 || moveDx < -6 || moveDy > 6 || moveDy < -6;
 }
@@ -149,7 +147,7 @@
     }
 }
 
-- (void)NekoDirection
+- (void)nekoDirection
 {
     id			NewState;
     double		LargeX, LargeY;
@@ -202,7 +200,7 @@
 	//printf("paint %d %d\n", time(NULL), tickCount % [nekoState count]);
 	
 	[self calcDxDyForX:x Y:y];
-	BOOL isNekoMoveStart = [self isNekoMoveStart];
+	BOOL isnekoMoveStart = [self isnekoMoveStart];
 	
     if(nekoState != sleep) {
 		[view setImageTo:(NSImage*)[nekoState objectAtIndex:tickCount % [nekoState count]]];
@@ -213,7 +211,7 @@
 	[self advanceClock];
 	
     if(nekoState == stop) {
-		if (isNekoMoveStart) {
+		if (isnekoMoveStart) {
 			[self setStateTo:awake];
 			goto breakout;
 		}
@@ -232,7 +230,7 @@
 		[self setStateTo:jare];
 		//}
 	} else if(nekoState == jare) {
-		if (isNekoMoveStart) {
+		if (isnekoMoveStart) {
 			[self setStateTo:awake];
 			goto breakout;
 		}
@@ -241,7 +239,7 @@
 		}
 		[self setStateTo:kaki];
 	} else if(nekoState == kaki) {
-		if (isNekoMoveStart) {
+		if (isnekoMoveStart) {
 			[self setStateTo:awake];
 			goto breakout;
 		}
@@ -250,7 +248,7 @@
 		}
 		[self setStateTo:akubi];
 	} else if(nekoState == akubi) {
-		if (isNekoMoveStart) {
+		if (isnekoMoveStart) {
 			[self setStateTo:awake];
 			goto breakout;
 		}
@@ -259,7 +257,7 @@
 		}
 		[self setStateTo:sleep];
 	} else if(nekoState == sleep) {
-		if (isNekoMoveStart) {
+		if (isnekoMoveStart) {
 			[self setStateTo:awake];
 			goto breakout;
 		}
@@ -267,13 +265,13 @@
 		if (stateCount < 3) {
 			goto breakout;
 		}
-		[self NekoDirection];	/* 猫が動く向きを求める */
+		[self nekoDirection];	/* 猫が動く向きを求める */
 	} else if(nekoState == u_move || nekoState == d_move || nekoState == l_move || nekoState == r_move || nekoState == ul_move || nekoState == ur_move || nekoState == dl_move || nekoState == dr_move) {
 		x += moveDx;
 		y += moveDy;
-		[self NekoDirection];
+		[self nekoDirection];
 	} else if(nekoState == u_togi || nekoState == d_togi || nekoState == l_togi || nekoState == r_togi) {
-		if (isNekoMoveStart) {
+		if (isnekoMoveStart) {
 			[self setStateTo:awake];
 			goto breakout;
 		}
