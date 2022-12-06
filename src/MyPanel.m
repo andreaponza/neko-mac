@@ -25,74 +25,81 @@
 	[self setBackgroundColor:[NSColor clearColor]];
 	NSBundle *bundle = [NSBundle mainBundle];
 	
+	NSArray *arguments = [[NSProcessInfo processInfo] arguments];
+	NSString *folder = @"neko";
+		
+	if (arguments.count > 1) {
+		folder = arguments.lastObject;
+	}
+	
 	stop = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/mati2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/mati2"] ofType:@"gif"]], nil];
 	[stop retain];
 	jare = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/jare2" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/mati2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/jare2"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/mati2"] ofType:@"gif"]], nil];
 	[jare retain];
 	kaki = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/kaki1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/kaki2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/kaki1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/kaki2"] ofType:@"gif"]], nil];
 	[kaki retain];
 	akubi = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/mati3" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/mati3"] ofType:@"gif"]], nil];
 	[akubi retain];
 	sleep = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/sleep1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/sleep2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/sleep1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/sleep2"] ofType:@"gif"]], nil];
 	[sleep retain];
 	awake = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/awake" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/awake"] ofType:@"gif"]], nil];
 	[awake retain];
 	u_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/up1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/up2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/up1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/up2"] ofType:@"gif"]], nil];
 	[u_move retain];
 	d_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/down1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/down2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/down1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/down2"] ofType:@"gif"]], nil];
 	[d_move retain];
 	l_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/left1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/left2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/left1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/left2"] ofType:@"gif"]], nil];
 	[l_move retain];
 	r_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/right1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/right2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/right1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/right2"] ofType:@"gif"]], nil];
 	[r_move retain];
 	ul_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/upleft1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/upleft2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/upleft1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/upleft2"] ofType:@"gif"]], nil];
 	[ul_move retain];
 	ur_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/upright1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/upright2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/upright1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/upright2"] ofType:@"gif"]], nil];
 	[ur_move retain];
 	dl_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/dwleft1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/dwleft2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/dwleft1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/dwleft2"] ofType:@"gif"]], nil];
 	[dl_move retain];
 	dr_move = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/dwright1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/dwright2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/dwright1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/dwright2"] ofType:@"gif"]], nil];
 	[dr_move retain];
 	u_togi = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/utogi1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/utogi2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/utogi1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/utogi2"] ofType:@"gif"]], nil];
 	[u_togi retain];
 	d_togi = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/dtogi1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/dtogi2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/dtogi1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/dtogi2"] ofType:@"gif"]], nil];
 	[d_togi retain];
 	l_togi = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/ltogi1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/ltogi2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/ltogi1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/ltogi2"] ofType:@"gif"]], nil];
 	[l_togi retain];
 	r_togi = [NSArray arrayWithObjects:
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/rtogi1" ofType:@"gif"]],
-		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"dog_gif/rtogi2" ofType:@"gif"]], nil];
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/rtogi1"] ofType:@"gif"]],
+		[[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"%@%@", folder, @"_gif/rtogi2"] ofType:@"gif"]], nil];
 	[r_togi retain];
 	
 	[self setStateTo:stop];
