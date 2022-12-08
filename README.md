@@ -1,3 +1,4 @@
+<img src="Neko.jpg" alt="Neko" style="height: 100px; width:100px;"/></br>
 # (Neko)
 
 A Mac OS X port of the [Neko program](http://en.wikipedia.org/wiki/Neko_%28computer_program%29) written in Objective-C. 
@@ -9,10 +10,11 @@ the terminal and type `killall Neko` or open the Activity Monitor and quit
 Neko
 
 To use option launch app from terminal</br>
-/Applications/Neko.app/Contents/MacOS/Neko -dog
+`/Applications/Neko.app/Contents/MacOS/Neko -dog`
 
 Option are:</br>
 -neko Use neko gif</br>
 -dog Use dog gif</br>
 -tomoyo Use tomoyo gif</br>
--h This guide</br>
+-h This guide</br></br>
+<img src="screen.png" alt="Neko" style="height: 600px;"/></br>
