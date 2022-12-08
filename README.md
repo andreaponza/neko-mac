@@ -17,4 +17,4 @@ Option are:</br>
 -dog Use dog gif</br>
 -tomoyo Use tomoyo gif</br>
 -h This guide</br></br>
-<img src="Screen.gif" alt="Neko" style="height: 600px;"/></br>
+<img src="Screen.gif" alt="Neko"/></br>
