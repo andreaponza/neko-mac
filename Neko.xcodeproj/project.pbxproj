@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65195C14293F8D17007AF466 /* tomoyo_gif in Resources */ = {isa = PBXBuildFile; fileRef = 65195C13293F8D16007AF466 /* tomoyo_gif */; };
 		658D8D04293AADF000BFA635 /* dog_gif in Resources */ = {isa = PBXBuildFile; fileRef = 658D8D03293AADF000BFA635 /* dog_gif */; };
 		658D8D06293AAE0200BFA635 /* neko_gif in Resources */ = {isa = PBXBuildFile; fileRef = 658D8D05293AAE0200BFA635 /* neko_gif */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
@@ -25,6 +26,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* 猫_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "猫_Prefix.pch"; sourceTree = "<group>"; };
+		65195C13293F8D16007AF466 /* tomoyo_gif */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tomoyo_gif; sourceTree = "<group>"; };
 		658D8D03293AADF000BFA635 /* dog_gif */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dog_gif; sourceTree = "<group>"; };
 		658D8D05293AAE0200BFA635 /* neko_gif */ = {isa = PBXFileReference; lastKnownFileType = folder; path = neko_gif; sourceTree = "<group>"; };
 		658D8D07293AB17300BFA635 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				65195C13293F8D16007AF466 /* tomoyo_gif */,
 				658D8D05293AAE0200BFA635 /* neko_gif */,
 				658D8D03293AADF000BFA635 /* dog_gif */,
 				A7B9FF1C1A575C310074B4D4 /* Neko.icns */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				65195C14293F8D17007AF466 /* tomoyo_gif in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				658D8D04293AADF000BFA635 /* dog_gif in Resources */,
 				A7B9FF1D1A575C310074B4D4 /* Neko.icns in Resources */,
