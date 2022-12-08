@@ -27,9 +27,31 @@
 	
 	NSArray *arguments = [[NSProcessInfo processInfo] arguments];
 	NSString *folder = @"neko";
-		
+	
 	if (arguments.count > 1) {
-		folder = arguments.lastObject;
+		if ([arguments[1] isEqual: @"-dog"]){
+			folder = @"dog";
+		}
+		else if ([arguments[1] isEqual: @"-tomoyo"]){
+			folder = @"tomoyo";
+		}
+		else if ([arguments[1] isEqual: @"-h"]){
+			printf("%s\n\n", "Usage: neko [<options>]");
+			printf("%s\n", "Option are:");
+			printf("%s\n", "-neko Use neko gif");
+			printf("%s\n", "-dog Use dog gif");
+			printf("%s\n", "-tomoyo Use tomoyo gif");
+			[[NSApplication sharedApplication] terminate:nil];
+		}
+		else {
+			printf("Error: Invalid option\n");
+			printf("%s\n\n", "Usage: neko [<options>]");
+			printf("%s\n", "Option are:");
+			printf("%s\n", "-neko Use neko gif");
+			printf("%s\n", "-dog Use dog gif");
+			printf("%s\n", "-tomoyo Use tomoyo gif");
+			[[NSApplication sharedApplication] terminate:nil];
+		}
 	}
 	
 	stop = [NSArray arrayWithObjects:
