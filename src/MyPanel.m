@@ -35,6 +35,9 @@
 		else if ([arguments[1] isEqual: @"-tomoyo"]){
 			folder = @"tomoyo";
 		}
+		else if ([arguments[1] isEqual: @"-bestie"]){
+			folder = @"bsd";
+		}
 		else if ([arguments[1] isEqual: @"-h"]){
 			printf("%s\n\n", "Usage: neko [<options>]");
 			printf("%s\n", "Option are:");
