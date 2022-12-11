@@ -19,4 +19,4 @@ Option are:</br>
 -h This guide</br></br>
 <img src="Screen.gif" alt="Neko"/></br>
 
-[tuttologico.it](https://tuttologico.it)
+[tuttologico.it](https://tuttologico.altervista.org/neko-ho-portato-il-simpatico-gattino-anche-su-mac-osx/)
