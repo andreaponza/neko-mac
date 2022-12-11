@@ -11,6 +11,8 @@
 		656B2E452944A056000A077C /* bsd_gif in Resources */ = {isa = PBXBuildFile; fileRef = 656B2E442944A056000A077C /* bsd_gif */; };
 		658D8D04293AADF000BFA635 /* dog_gif in Resources */ = {isa = PBXBuildFile; fileRef = 658D8D03293AADF000BFA635 /* dog_gif */; };
 		658D8D06293AAE0200BFA635 /* neko_gif in Resources */ = {isa = PBXBuildFile; fileRef = 658D8D05293AAE0200BFA635 /* neko_gif */; };
+		65E056CA2945F42200F48AB6 /* sakura_gif in Resources */ = {isa = PBXBuildFile; fileRef = 65E056C82945F42100F48AB6 /* sakura_gif */; };
+		65E056CB2945F42200F48AB6 /* tora_gif in Resources */ = {isa = PBXBuildFile; fileRef = 65E056C92945F42100F48AB6 /* tora_gif */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -33,6 +35,8 @@
 		658D8D05293AAE0200BFA635 /* neko_gif */ = {isa = PBXFileReference; lastKnownFileType = folder; path = neko_gif; sourceTree = "<group>"; };
 		658D8D07293AB17300BFA635 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		658D8D0B293AB1F300BFA635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Base; path = Base.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		65E056C82945F42100F48AB6 /* sakura_gif */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sakura_gif; sourceTree = "<group>"; };
+		65E056C92945F42100F48AB6 /* tora_gif */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tora_gif; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Neko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A700278B0CA641680057F7E4 /* MyPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPanel.h; sourceTree = "<group>"; };
 		A700278C0CA641680057F7E4 /* MyPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPanel.m; sourceTree = "<group>"; usesTabs = 1; };
@@ -120,6 +124,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				65E056C82945F42100F48AB6 /* sakura_gif */,
+				65E056C92945F42100F48AB6 /* tora_gif */,
 				65195C13293F8D16007AF466 /* tomoyo_gif */,
 				658D8D05293AAE0200BFA635 /* neko_gif */,
 				658D8D03293AADF000BFA635 /* dog_gif */,
@@ -208,7 +214,9 @@
 				65195C14293F8D17007AF466 /* tomoyo_gif in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				658D8D04293AADF000BFA635 /* dog_gif in Resources */,
+				65E056CB2945F42200F48AB6 /* tora_gif in Resources */,
 				A7B9FF1D1A575C310074B4D4 /* Neko.icns in Resources */,
+				65E056CA2945F42200F48AB6 /* sakura_gif in Resources */,
 				658D8D06293AAE0200BFA635 /* neko_gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
