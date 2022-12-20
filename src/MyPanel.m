@@ -38,6 +38,12 @@
 		else if ([arguments[1] isEqual: @"-bsd"]){
 			folder = @"bsd";
 		}
+		else if ([arguments[1] isEqual: @"-tora"]){
+			folder = @"tora";
+		}
+		else if ([arguments[1] isEqual: @"-buddy"]){
+			folder = @"buddy";
+		}
 		else if ([arguments[1] isEqual: @"-h"]){
 			printf("%s\n\n", "Usage: neko [<options>]");
 			printf("%s\n", "Option are:");
@@ -45,6 +51,8 @@
 			printf("%s\n", "-dog Use dog gif");
 			printf("%s\n", "-tomoyo Use tomoyo gif");
 			printf("%s\n", "-bsd Use bsd gif");
+			printf("%s\n", "-tora Use tora gif");
+			printf("%s\n", "-buddy Use buddy gif");
 			[[NSApplication sharedApplication] terminate:nil];
 		}
 		else {
@@ -55,6 +63,8 @@
 			printf("%s\n", "-dog Use dog gif");
 			printf("%s\n", "-tomoyo Use tomoyo gif");
 			printf("%s\n", "-bsd Use bsd gif");
+			printf("%s\n", "-tora Use tora gif");
+			printf("%s\n", "-buddy Use buddy gif");
 			[[NSApplication sharedApplication] terminate:nil];
 		}
 	}
